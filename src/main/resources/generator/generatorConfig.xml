@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE generatorConfiguration
+                PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+                "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+<context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+
+    <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+        <property name="mappers" value="tk.mybatis.mapper.common.Mapper"/>
+        <!-- caseSensitive默认false，当数据库表名区分大小写时，可以将该属性设置为true -->
+        <property name="caseSensitive" value="true"/>
+    </plugin>
+
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                    connectionURL="jdbc:mysql://localhost:3306/test"
+                    userId="root"
+                    password="1234">
+    </jdbcConnection>
+    <!--生成的实体类的存储路径和包名-->
+    <javaModelGenerator targetPackage="com.ghaien.dao.pojo.vo" targetProject="E:\document\IdeaProjects\spring-boot-demo\src\main\java"/>
+    <!--生成的*Mapper.xml文件的存储位置-->
+    <sqlMapGenerator targetPackage="mapper"  targetProject="E:\document\IdeaProjects\spring-boot-demo\src\main\resources"/>
+    <!--生成的*Mapper.java文件的存储位置和包名-->
+    <javaClientGenerator targetPackage="com.ghaien.dao.mapper" targetProject="E:\document\IdeaProjects\spring-boot-demo\src\main\java" type="XMLMAPPER" />
+    <!--对应数据库中表名（可以使用"%" 对应所有表）-->
+    <table tableName="user" >
+        <!--该表有一个id自增的主键，在生成实体类的时候会根据该配置生成相应的注解-->
+        <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+    </table>
+</context>
+</generatorConfiguration>

@@ -2,6 +2,14 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.ghaien.dao.UserDao">
+    <!--<resultMap id="resultMap" type="com.ghaien.entity.User">-->
+        <!--<id column="id" jdbcType="BIGINT" property="id" />-->
+        <!--<id column="user_name" jdbcType="BIGINT" property="userName" />-->
+        <!--<id column="password" jdbcType="BIGINT" property="password" />-->
+        <!--<id column="create_time" jdbcType="BIGINT" property="createTime" />-->
+        <!--<id column="update_time" jdbcType="BIGINT" property="updateTime" />-->
+        <!--<id column="enable" jdbcType="BIGINT" property="enable" />-->
+    <!--</resultMap>-->
     <sql id="allColumn">
         id, user_name, password, create_time, update_time, enable
     </sql>

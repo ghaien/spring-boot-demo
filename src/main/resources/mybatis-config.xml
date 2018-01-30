@@ -3,6 +3,7 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <settings>
+        <!-- 可以将以下划线命名的表字段与实体类中以驼峰命名的属性进行映射 -->
         <setting name="mapUnderscoreToCamelCase" value="true" />
     </settings>
 </configuration>

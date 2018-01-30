@@ -1,9 +1,7 @@
 package com.ghaien.entity;
 
-
 import lombok.Getter;
 import lombok.Setter;
-
 import java.io.Serializable;
 import java.util.Date;
 
